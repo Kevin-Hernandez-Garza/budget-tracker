@@ -28,6 +28,7 @@
 - CSS
 - JavaScript
 - Mongoose
+- MongoDB
 - ExpressJS
 - IndexedDB
 
