@@ -1,5 +1,3 @@
-const e = require("express");
-
 const APP_PREFIX = 'BudgetTracker-';
 const VERSION = 'version_01';
 const CACHE_NAME = APP_PREFIX + VERSION;
@@ -7,9 +5,9 @@ const CACHE_NAME = APP_PREFIX + VERSION;
 // files that need to be cache(stored)
 const FILES_TO_CACHE = [
     './index.html',
-    './styles.css',
-    './idb.js',
-    './index.js'
+    './css/styles.css',
+    './js/idb.js',
+    './js/index.js'
 ];
 
 // callback function
@@ -20,7 +18,7 @@ self.addEventListener('install', function(e) {
             return cache.addAll(FILES_TO_CACHE) 
         })
     )
-})
+});
 
 self.addEventListener('activate', function (e) {
     e.waitUntil(
@@ -58,5 +56,5 @@ self.addEventListener('fetch', function(e) {
             // return request || fetch(e.request)
         })
     )
-})
+});
 

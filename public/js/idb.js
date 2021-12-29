@@ -1,5 +1,3 @@
-const { get } = require("express/lib/response");
-
 // holds the db connection
 let db;
 // establish connection to idb called "budget_tracker" and set to version (1)
@@ -10,8 +8,6 @@ request.onupgradeneeded = function(event) {
     const db = event.target.result;
     // creating data container(table) called "object store", we set the name and increment 
     db.createObjectStore('budget', { autoIncrement: true });
-
-
 };
 
 // upon success
