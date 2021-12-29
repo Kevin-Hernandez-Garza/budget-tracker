@@ -2,7 +2,7 @@
 let db;
 // establish connection to idb called "budget_tracker" and set to version (1)
 const request = indexedDB.open('budget_tracker', 1);
-// this event will emit if the database version changes (nonexistant to version 1, v1 to v2, etc.)
+// this event will emit if the database version changes (nonexistent to version 1, v1 to v2, etc.)
 request.onupgradeneeded = function(event) {
     // save reference to db
     const db = event.target.result;
